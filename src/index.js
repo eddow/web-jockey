@@ -150,10 +150,12 @@ function logged(descr, usage) {
 
 const app = express();
 function useStatic(root, target) {
+	logger.info(`Registering static '${root}'`);
 	app.use(root, logged(`static:${root}`, express.static(resolve(target))));
 }
 function useDynamic(root, target) {
-	app.use(root, logged(`static:${root}`, function(req, res) {
+	logger.info(`Registering dynamic '${root}'`);
+	app.use(root, logged(`dynamic:${root}`, function(req, res) {
 		var headers = req.headers;
 		delete headers.host;
 		axios.get(target+req.url, {headers}).then(function(resp) {
