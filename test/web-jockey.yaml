@@ -1,0 +1,11 @@
+port: 80
+log: /var/log/web-jockey/
+launch:
+  dynamic:
+    command: node
+    args:
+        - dynamic/index
+static:
+  /statex: static
+dynamic:
+  /dynex: http://localhost:3000

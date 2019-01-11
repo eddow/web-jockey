@@ -1,0 +1,34 @@
+{
+  "name": "web-jockey",
+  "version": "1.0.0",
+  "description": "One-liner web request dispatcher among several services",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js -vd test",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "web",
+    "dispatch",
+    "server"
+  ],
+  "repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/eddow/web-jockey.git"
+  },
+  "bugs": {
+	  "url": "https://github.com/eddow/web-jockey/issues"
+  },
+  "homepage": "https://github.com/eddow/web-jockey",
+  "bin": "src/index.js",
+  "author": "fmdm",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.2",
+    "yaml": "^1.2.0",
+    "yargs": "^12.0.5"
+  }
+}
