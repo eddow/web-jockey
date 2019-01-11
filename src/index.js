@@ -95,7 +95,7 @@ try {
 } catch(x) {
 	critical(`Unable to parse YAML ${fileName}`, x)
 }
-port = argv.port || config.port;
+port = argv.port || config.port || 80;
 logDir = argv.log || config.log;
 if(logDir) {
 	logger.add(new dailyRotateFile({
